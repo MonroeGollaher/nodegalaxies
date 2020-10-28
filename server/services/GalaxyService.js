@@ -12,11 +12,11 @@ class GalaxyService {
     }
 
     async delete(id){
-        let planet = await dbContext.Galaxies.findByIdAndDelete(id)
-       if(!planet){
-           throw new BadRequest("No planet by that ID")
+        let galaxy = await dbContext.Galaxies.findByIdAndDelete(id)
+       if(!galaxy){
+           throw new BadRequest("No galaxy by that ID")
        }
-       return planet
+       return galaxy
     }
 }
 
